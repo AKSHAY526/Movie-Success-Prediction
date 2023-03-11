@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  </head>
+<div class="container mt-3">
+  <div class="row">     
+    <div class="col-md-4">
+
+      <h4>Predict Movie Success Rate</h4>
+
+      <form ngNativeValidate #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+          <div class="form-group">
+              <label>Runtime:</label>
+              <input  type="text" class="form-control" name="Runtime" [(ngModel)]="Runtime" required placeholder="Range ->(66to 187)">
+          </div>
+
+          				
+          <div class="form-group">
+              <label>Rating:</label>
+              <input  type="text" class="form-control" name="Rating" [(ngModel)]="Rating"  placeholder="Range ->(1.9 to 9)">
+          </div>
+
+          <div class="form-group">
+              <label> Votes :</label>
+              <input  type="text" class="form-control" name="Votes" [(ngModel)]="Votes"  placeholder="Range ->(178 to 17,91,916)">
+          </div>
+
+          <div class="form-group">
+              <label >Revenue:</label>
+              <input  type="text" class="form-control" name="Revenue" [(ngModel)]="Revenue"  placeholder="Range ->(0 to 936.63)">
+          </div>
+
+          <div class="form-group">
+              <label > Metascore :</label>
+              <input  type="text" class="form-control" name="Metascore" [(ngModel)]="Metascore"  placeholder="Range ->(11 to 100)">
+         </div>
+
+         <div class="form-group mt-2">
+          <button class="btn btn-sm btn-danger">Submit</button>
+        </div>
+      
+      </form>
+      <div class="mt-3">
+        Movie Success : <b class="text-primary">{{ data?.Prediction}}</b>
+      </div>
+    </div>
+  </div>
+</div>
