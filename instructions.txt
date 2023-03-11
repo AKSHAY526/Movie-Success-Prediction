@@ -1,0 +1,28 @@
+1. Download and Install Python from https://www.python.org/downloads 
+(Ref: https://data-flair.training/blogs/install-python-windows/)
+Note: Advanced Options -> Add Python to environment variables (during installation)
+===============================================================================================
+2. Create Project Folder "FastAPIDemo"
+3. Go to FastAPIDemo folder
+4. Create app.py file
+5. Open VS Code Editor and Install Libraries using Terminal
+pip install fastapi uvicorn 
+
+6. Write the Code
+7. Run the program: uvicorn app:app --host 0.0.0.0 --port 80
+8. Browse URL: http://127.0.0.1/predict?N=156&P=170&K=120&temperature=30&humidity=20&ph=7.5&rainfall=200
+
+
+---
+WebAPI Testing with FastAPI
+http://127.0.0.1:8000/docs
+
+----
+http://127.0.0.1/predict?N=71&P=54&K=16&temperature=23&humidity=64&ph=6&rainfall=88
+====================
+
+http://127.0.0.1/predict?Runtime=108.0&Rating=7.2&Votes=60545.0&Revenue=270.32&Metascore=59.0
+==
+Runtime	Rating	Votes	Revenue	Metascore
+
+108.0	7.2	60545.0	270.32	59.0
